@@ -1,0 +1,57 @@
+{
+  "World Geomorphology" : ["latitude","longitude","internationl date line","pole star","earthquake","mountain","fold","fault","plate tectonics",
+  "crust","mantle","core","inner planets","outer planets","jovian planets","meteor","comet",
+  "asteroid","satellite","planet","sea apreading","continental drift","geomagnetism"
+  ,"convective megma currents"," vulcanism"," volcano"," extrusive landforms"," intrusive landforms",
+  " karst"," fluvial landforms"," glacial "," river erosion"," wind erosion"," glacier erosion",
+  " valleys"," wave erosion","incised meander","stalactite","perihelion","stagmatite","aphelion"
+],
+"World Climate" : ["atmosphere"," troposphere"," stratosphere"," exosphere"," ionosphere"," ozone"," heat budget",
+" pressure"," temperature"," wind"," coriolis"," cyclone"," westerlies"," trade winds"," polar winds"," jet stream",
+" monsoon"," equatorial climate"," mediterranean climate"," desert"," tundra"," taiga"," polar"," doldrums",
+" local winds"," planetary winds"," humidity"," rainfall"," thunderstorms",
+" koppen"," front"," airmass","precipitation","cloud"],
+
+"World Vegetation" : ["forest"," desert"," savannah"," grasslands"," steppe"," prairy"," selvas",
+" lichens"," deciduous","coniferous"],
+
+"Oceanography" : ["ocean salinity"," ocean temperature"," ocean currents",
+" ocean density","tides","EEZ","FISHING GROUND"],
+
+"World Mapping" : ["straits"," mountains"," seas"," boundary"," neighbouring","islands",
+"Countries","Country","asean","South East Asia","West Asia","strait"],
+
+"Indian Physiography" : ["duns"," duars"," Himalayas"," Deccan Plateau"," Western Ghats"," eastern ghats",
+" North Eastern Himalayas"," Purvanchal Himalays","Southern Hill","Satpura","Vindhaynchal","Aravalli",
+"peninsular river","himalayan river","trans-himalayas","Thar desert","Chota Nagpur Plateau","Shillong plateau",
+"meghalaya plateau","Indus river system","Ganga-Brahmputra plain","Garo-Khasi","Lushai hills","Dafla Hills","Manipuri hills"],
+
+"Indian Climate" : ["South West Monsoon"," North East Monsoon"," Loos"," Western Disturbance"," Indian Ocean Dipole",
+" El Nino"," La Nina"," Kal Baishaki"," Cherry Blossom"," Easterly Jet Stream"," Onset of Monsoon"," Retreating Monsoon"],
+
+"Indian Soil" : ["Red Soil"," Laterite Soil"," Black Soil"," desert soil"," alluvial soil"," khadar"," bangar"," tarai"," bhabar","Karewa"],
+"Indian Vegetation" : ["Sal"," Teak"," Montane Vegetation"," Moist deciduous"," dry deciduous"," thorny vegetationy"," tropical evergreen forest"],
+"Indian Agriculture" : ["Rabi"," Kharif"," rice"," wheat","AGRICULTURE"," cereals"," oilseeds"," jowar",
+" bajra"," soil erosion"," irrigation"," fertlizer"," soil conservation"," soil moisture"," boro"," zaid",
+" fisheries"," bamboo"," horticulture"," livestock"," buffalo"," cow","cash crops","pulses","GROUNDNUT",
+"MONOCULTURE","PLANTATION","HORTICULTURE","WASTE-LAND","SHIFTING CULTIVATION","net sown area","tea","coffee","mixed farming"],
+
+"Indian Transportation" : ["Indian railway"," road"," aviation"," waterways"," NHAI"," NHDP"," Sagarmala"," Bharatmala",
+" UDAAN"," national highways ","railway","Marmagoa port","SHIPPING","GOLDEN QUADRILATERAL","Kandla port","Mubai port",
+"haldia port","transport"],
+
+"Indian Demographics" : ["Tribes"," women"," census"," population density"," decadal growth rate"," literacy rate",
+"MIGRATION","SEX RATIO"," IMR"," MMR"," education"," health"," mega cities"," urban population","Schedule Tribes",
+"Tribe","URBANIZATION","POPULATION","HDI","population growth"],
+
+"Infrastructure & Industries" : ["dams"," thermal power plants"," power"," nuclear power plant"," solar power",
+" wind power"," solar energy"," wind energy"," geothermal energy","Minerals","industry","Industries",
+"Underground Coal Gasification ","ELECTRIFICATION","KAKRAPAR","mineral resource","coal","crude oil"],
+
+"Indian Mapping" : ["rivers"," dams"," mountain peak"," mountain passes"," national highways",
+" important places"," religious places","tourist places"," Brahmputra"," Kaveri"," Krishna"," Narmada",
+" Godavari"," Mahandi"," Narmada"," Tapi"," Luni"," Chambal"," Son"," Yamuna"," rivers"," passes","duns",
+" duars"," Himalayas"," Deccan Plateau"," Western Ghats"," eastern ghats"," North Eastern Himalayas",
+" Purvanchal Himalays"," Ganga"," Indus RIVER"," Satluj","Indian States","States"]
+
+}
