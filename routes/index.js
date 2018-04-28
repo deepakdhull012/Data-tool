@@ -31,18 +31,8 @@ router.post('/', upload.single('fileUpload'),function(req, res) {
   else{
   //  res.send("Other");
   }
-  /*fs.readFile(req.file.path, {encoding: 'utf-8'}, function(err,data){
-    if (!err) {
-        console.log('received data: ' + data);
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        res.write(data);
-        res.end();
-    } else {
-        console.log(err);
-    }
-});*/
-
-textract.fromFileWithPath(req.file.path, function( error, text ) {
+res.write(req)
+/*textract.fromFileWithPath(req.file.path, function( error, text ) {
   if(!error){
     console.log('received data: ' + text);
     res.write(req.file.filename+" "+text);
@@ -53,9 +43,7 @@ textract.fromFileWithPath(req.file.path, function( error, text ) {
   }
 
 })
-
-
-
+*/
 });
 
 module.exports = router;
