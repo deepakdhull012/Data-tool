@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "440503878558",
+    "firebase_url": "https://testyou-1a6bc.firebaseio.com",
+    "project_id": "testyou-1a6bc",
+    "storage_bucket": "testyou-1a6bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440503878558:android:9feb4682169a1681",
+        "android_client_info": {
+          "package_name": "com.testYou"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440503878558-k7ep6j331s4bbg5jl0e7198ar8q26tai.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "440503878558-oshtp40fr6rtg9q4mka9b1uue7no3mda.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.testYou",
+            "certificate_hash": "43f036fc2143fb4c36ae6bf15a77490da7070b01"
+          }
+        },
+        {
+          "client_id": "440503878558-ptlkb5vvfkr36f5k56r2clcni6oaeklb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3rfxfgvxi8EZCQ-cOytdCNzfxIRTlhy8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
