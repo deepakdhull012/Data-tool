@@ -25,13 +25,8 @@ router.get('/', function(req, res, next) {
 
 router.post('/', upload.single('fileUpload'),function(req, res) {
 
-  if(req.file.filename.indexOf('pdf')>0){
-  //  res.send(req.body);
-  }
-  else{
-  //  res.send("Other");
-  }
-res.write(req)
+
+res.send(req.body)
 /*textract.fromFileWithPath(req.file.path, function( error, text ) {
   if(!error){
     console.log('received data: ' + text);
