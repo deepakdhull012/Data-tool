@@ -55,7 +55,7 @@
 "duars","Himalayas","Deccan Plateau","Western Ghats","eastern ghats","North Eastern Himalayas",
 "Purvanchal Himalays","Ganga","Indus RIVER","Satluj","Indian States","States "]
 
-}
+},
 
 "polity":{
   "Historical Framework": ["Morley - Minto reforms","Montague - Chelmsford Reforms","1919","1909","1935","GoI Act of 1919",
