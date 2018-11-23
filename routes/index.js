@@ -14,7 +14,12 @@ var storage = multer.diskStorage({
 })
 
 var upload = multer({ storage: storage })
-var keyWords = extractKeys();
+var keyWords;
+extractKeys().then((res)=>{
+  keyWords = res;
+  console.log(keyWords)
+});
+
 
 router.get('/', function(req, res, next) {
   res.render('pages/index')
@@ -34,22 +39,32 @@ router.post('/', upload.single('fileUpload'),function(req, res) {
 
 });
 
-let quesSep = 'Ques.'
+let isQuestionAnswerSeperate = true;
+
+let quesSep = 'Ques)'
 let opAsep = '(a)'
 let opBsep = '(b)'
 let opCsep = '(c)'
 let opDsep = '(d)'
 
+let correctAnsSep = 'CORRECTANSWER)'
+let explanationSep = 'Explanation:)'
+
 
 
 function extractKeys(){
-textract.fromFileWithPath('public\\uploads\\geoKeys.txt', function( error, text ) {
+return new Promise((resolve,reject) => {
+textract.fromFileWithPath('public\\uploads\\geoKeys.txt', function( error, text) {
   if(!error){
-    return JSON.parse(text)
+    resolve(JSON.parse(text))
+
   }else {
       console.log(error);
+      resolve(null)
   }
 });
+});
+
 }
 
 
@@ -73,27 +88,61 @@ function getIndicesOf(searchStr, str, caseSensitive) {
 }
 
 function processor(fileContent){
-let questionOccurences = getIndicesOf(quesSep,fileContent)
+  let correctAnswerOccurence;
+  let explanationOccurence;
+let questionOccurences = getIndicesOf(quesSep,fileContent);
+if(isQuestionAnswerSeperate){
+  correctAnswerOccurence = getIndicesOf(correctAnsSep,fileContent);
+  explanationOccurence = getIndicesOf(explanationSep,fileContent);
+}
+
+
 //console.log(questionOccurences)
 
 let unseggregatedQuestionList = []
+let correctAnswerList = []
+let explnationList = []
 for(let occurence in questionOccurences){
     let unseggregatedQuestion = ""
     if(occurence == questionOccurences.length-1){
-    unseggregatedQuestion = fileContent.substr(questionOccurences[occurence],fileContent.length-1)
-
-    }
+      let endPoint;
+      if(isQuestionAnswerSeperate){
+        endPoint = fileContent.indexOf("ANSWERS & EXPLANATION");
+      }
+      else{
+        endPoint = fileContent.length - 1;
+      }
+    unseggregatedQuestion = fileContent.substr(questionOccurences[occurence],endPoint)
+  }
     else{
        unseggregatedQuestion = fileContent.substr(questionOccurences[occurence],questionOccurences[parseInt(occurence)+1]-1)
     }
-
     unseggregatedQuestionList.push(unseggregatedQuestion)
-
-   // console.log(questionStr,"**************************\n\n<br>")
-
-
 }
-console.log(unseggregatedQuestionList.length)
+
+if(isQuestionAnswerSeperate){
+
+
+  for(let occurence of correctAnswerOccurence){
+      let correctAnswer = fileContent.substr(occurence,20);
+      correctAnswerList.push(correctAnswer);
+  }
+for(let occurence in explanationOccurence){
+  let explanation = "";
+  if(occurence == explanationOccurence.length-1){
+    explanation = fileContent.substr(explanationOccurence[occurence],fileContent.length-1);
+  }
+  else{
+    explanation = fileContent.substr(explanationOccurence[occurence],explanationOccurence[parseInt(occurence)+1]-10);
+  }
+  explnationList.push(explanation);
+}
+}
+
+
+console.log("No Of Questions: "+unseggregatedQuestionList.length)
+console.log("No Of Correct Answers: "+correctAnswerList.length)
+console.log("No Of Explanations: "+explnationList.length)
 seggregatedQuestionList = []
 for(let unseggregatedQuestion of unseggregatedQuestionList){
     let seggregatedQuestion = {}
@@ -105,19 +154,25 @@ for(let unseggregatedQuestion of unseggregatedQuestionList){
     let noOfKeyWordMatchedVar = ""
     let noOfKeyWordMatched = 0
     seggregatedQuestion.keyWordMatchArray = []
-    for(let topic in keyWords){
+    seggregatedQuestion.keyWordMatchArray.km = []
+    for(let subject in keyWords){
+    for(let topic in keyWords[subject]){
         noOfKeyWordMatched = 0
         noOfKeyWordMatchedVar = topic+"matched"
+        let keyWordMatchdata = {}
+        keyWordMatchdata.km = []
         for(let kw of keyWords[topic]){
             if(seggregatedQuestion.qContent.toLowerCase().indexOf(kw.toLowerCase())>=0){
                  ++noOfKeyWordMatched
+                 keyWordMatchdata.km.push(kw)
             }
         }
 
-        let keyWordMatchdata = {}
+
         keyWordMatchdata[noOfKeyWordMatchedVar] = noOfKeyWordMatched
         seggregatedQuestion.keyWordMatchArray.push(keyWordMatchdata)
     }
+  }
 
     var noOfKeywordsMatched = 0
     var max = 0
@@ -140,6 +195,7 @@ for(let unseggregatedQuestion of unseggregatedQuestionList){
         finalTopicName = "NA"
     }
     seggregatedQuestion.finalTopic = finalTopicName
+    delete seggregatedQuestion.keyWordMatchArray
     //console.log(seggregatedQuestion)
     //console.log("******************")
     seggregatedQuestionList.push(seggregatedQuestion)

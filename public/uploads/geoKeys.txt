@@ -1,57 +1,186 @@
-{
-  "World Geomorphology" : ["latitude","longitude","internationl date line","pole star","earthquake","mountain","fold","fault","plate tectonics",
+{"geo":{
+  "World Geomorphology": ["latitude","longitude","internationl date line","pole star","earthquake","mountain","fold","fault","plate tectonics",
   "crust","mantle","core","inner planets","outer planets","jovian planets","meteor","comet",
   "asteroid","satellite","planet","sea apreading","continental drift","geomagnetism"
-  ,"convective megma currents"," vulcanism"," volcano"," extrusive landforms"," intrusive landforms",
-  " karst"," fluvial landforms"," glacial "," river erosion"," wind erosion"," glacier erosion",
-  " valleys"," wave erosion","incised meander","stalactite","perihelion","stagmatite","aphelion"
+  ,"convective megma currents","vulcanism","volcano","extrusive landforms","intrusive landforms",
+  "karst","fluvial landforms","glacial","river erosion","wind erosion","glacier erosion",
+  "valleys","wave erosion","incised meander","stalactite","perihelion","stagmatite","aphelion"
 ],
-"World Climate" : ["atmosphere"," troposphere"," stratosphere"," exosphere"," ionosphere"," ozone"," heat budget",
-" pressure"," temperature"," wind"," coriolis"," cyclone"," westerlies"," trade winds"," polar winds"," jet stream",
-" monsoon"," equatorial climate"," mediterranean climate"," desert"," tundra"," taiga"," polar"," doldrums",
-" local winds"," planetary winds"," humidity"," rainfall"," thunderstorms",
-" koppen"," front"," airmass","precipitation","cloud"],
+"World Climate": ["atmosphere","troposphere","stratosphere","exosphere","ionosphere","ozone","heat budget",
+"pressure","temperature","wind","coriolis","cyclone","westerlies","trade winds","polar winds","jet stream",
+"monsoon","equatorial climate","mediterranean climate","desert","tundra","taiga","polar","doldrums",
+"local winds","planetary winds","humidity","rainfall","thunderstorms",
+"koppen","front","airmass","precipitation","cloud"],
 
-"World Vegetation" : ["forest"," desert"," savannah"," grasslands"," steppe"," prairy"," selvas",
-" lichens"," deciduous","coniferous"],
+"World Vegetation": ["forest","desert","savannah","grasslands","steppe","prairy","selvas",
+"lichens","deciduous","coniferous "],
 
-"Oceanography" : ["ocean salinity"," ocean temperature"," ocean currents",
-" ocean density","tides","EEZ","FISHING GROUND"],
+"Oceanography": ["ocean salinity","ocean temperature","ocean currents",
+"ocean density","tides","EEZ","FISHING GROUND "],
 
-"World Mapping" : ["straits"," mountains"," seas"," boundary"," neighbouring","islands",
-"Countries","Country","asean","South East Asia","West Asia","strait"],
+"World Mapping": ["straits","mountains","seas","boundary","neighbouring","islands",
+"Countries","Country","asean","South East Asia","West Asia","strait "],
 
-"Indian Physiography" : ["duns"," duars"," Himalayas"," Deccan Plateau"," Western Ghats"," eastern ghats",
-" North Eastern Himalayas"," Purvanchal Himalays","Southern Hill","Satpura","Vindhaynchal","Aravalli",
+"Indian Physiography": ["duns","duars","Himalayas","Deccan Plateau","Western Ghats","eastern ghats",
+"North Eastern Himalayas","Purvanchal Himalays","Southern Hill","Satpura","Vindhaynchal","Aravalli",
 "peninsular river","himalayan river","trans-himalayas","Thar desert","Chota Nagpur Plateau","Shillong plateau",
-"meghalaya plateau","Indus river system","Ganga-Brahmputra plain","Garo-Khasi","Lushai hills","Dafla Hills","Manipuri hills"],
+"meghalaya plateau","Indus river system","Ganga-Brahmputra plain","Garo-Khasi","Lushai hills","Dafla Hills","Manipuri hills "],
 
-"Indian Climate" : ["South West Monsoon"," North East Monsoon"," Loos"," Western Disturbance"," Indian Ocean Dipole",
-" El Nino"," La Nina"," Kal Baishaki"," Cherry Blossom"," Easterly Jet Stream"," Onset of Monsoon"," Retreating Monsoon"],
+"Indian Climate": ["South West Monsoon","North East Monsoon","Loos","Western Disturbance","Indian Ocean Dipole",
+"El Nino","La Nina","Kal Baishaki","Cherry Blossom","Easterly Jet Stream","Onset of Monsoon","Retreating Monsoon "],
 
-"Indian Soil" : ["Red Soil"," Laterite Soil"," Black Soil"," desert soil"," alluvial soil"," khadar"," bangar"," tarai"," bhabar","Karewa"],
-"Indian Vegetation" : ["Sal"," Teak"," Montane Vegetation"," Moist deciduous"," dry deciduous"," thorny vegetationy"," tropical evergreen forest"],
-"Indian Agriculture" : ["Rabi"," Kharif"," rice"," wheat","AGRICULTURE"," cereals"," oilseeds"," jowar",
-" bajra"," soil erosion"," irrigation"," fertlizer"," soil conservation"," soil moisture"," boro"," zaid",
-" fisheries"," bamboo"," horticulture"," livestock"," buffalo"," cow","cash crops","pulses","GROUNDNUT",
-"MONOCULTURE","PLANTATION","HORTICULTURE","WASTE-LAND","SHIFTING CULTIVATION","net sown area","tea","coffee","mixed farming"],
+"Indian Soil": ["Red Soil","Laterite Soil","Black Soil","desert soil","alluvial soil","khadar","bangar","tarai","bhabar","Karewa "],
+"Indian Vegetation": ["Sal","Teak","Montane Vegetation","Moist deciduous","dry deciduous","thorny vegetationy","tropical evergreen forest "],
 
-"Indian Transportation" : ["Indian railway"," road"," aviation"," waterways"," NHAI"," NHDP"," Sagarmala"," Bharatmala",
-" UDAAN"," national highways ","railway","Marmagoa port","SHIPPING","GOLDEN QUADRILATERAL","Kandla port","Mubai port",
-"haldia port","transport"],
+"Indian Agriculture": ["Rabi","Kharif","rice","wheat","AGRICULTURE","cereals","oilseeds","jowar",
+"bajra","soil erosion","irrigation","fertlizer","soil conservation","soil moisture","boro","zaid",
+"fisheries","bamboo","horticulture","livestock","buffalo","cow","cash crops","pulses","GROUNDNUT",
+"MONOCULTURE","PLANTATION","HORTICULTURE","WASTE-LAND","SHIFTING CULTIVATION","net sown area","tea","coffee","mixed farming "],
 
-"Indian Demographics" : ["Tribes"," women"," census"," population density"," decadal growth rate"," literacy rate",
-"MIGRATION","SEX RATIO"," IMR"," MMR"," education"," health"," mega cities"," urban population","Schedule Tribes",
-"Tribe","URBANIZATION","POPULATION","HDI","population growth"],
+"Indian Transportation": ["Indian railway","road","aviation","waterways","NHAI","NHDP","Sagarmala","Bharatmala",
+"UDAAN","national highways","railway","Marmagoa port","SHIPPING","GOLDEN QUADRILATERAL","Kandla port","Mubai port",
+"haldia port","transport "],
 
-"Infrastructure & Industries" : ["dams"," thermal power plants"," power"," nuclear power plant"," solar power",
-" wind power"," solar energy"," wind energy"," geothermal energy","Minerals","industry","Industries",
-"Underground Coal Gasification ","ELECTRIFICATION","KAKRAPAR","mineral resource","coal","crude oil"],
+"Indian Demographics": ["Tribes","women","census","population density","decadal growth rate","literacy rate",
+"MIGRATION","SEX RATIO","IMR","MMR","education","health","mega cities","urban population","Schedule Tribes",
+"Tribe","URBANIZATION","POPULATION","HDI","population growth "],
 
-"Indian Mapping" : ["rivers"," dams"," mountain peak"," mountain passes"," national highways",
-" important places"," religious places","tourist places"," Brahmputra"," Kaveri"," Krishna"," Narmada",
-" Godavari"," Mahandi"," Narmada"," Tapi"," Luni"," Chambal"," Son"," Yamuna"," rivers"," passes","duns",
-" duars"," Himalayas"," Deccan Plateau"," Western Ghats"," eastern ghats"," North Eastern Himalayas",
-" Purvanchal Himalays"," Ganga"," Indus RIVER"," Satluj","Indian States","States"]
+"Infrastructure & Industries": ["dams","thermal power plants","power","nuclear power plant","solar power",
+"wind power","solar energy","wind energy","geothermal energy","Minerals","industry","Industries",
+"Underground Coal Gasification","ELECTRIFICATION","KAKRAPAR","mineral resource","coal","crude oil "],
 
+"Indian Mapping": ["rivers","dams","mountain peak","mountain passes","national highways",
+"important places","religious places","tourist places","Brahmputra","Kaveri","Krishna","Narmada",
+"Godavari","Mahandi","Narmada","Tapi","Luni","Chambal","Son","Yamuna","rivers","passes","duns",
+"duars","Himalayas","Deccan Plateau","Western Ghats","eastern ghats","North Eastern Himalayas",
+"Purvanchal Himalays","Ganga","Indus RIVER","Satluj","Indian States","States "]
+
+}
+
+"polity":{
+  "Historical Framework": ["Morley - Minto reforms","Montague - Chelmsford Reforms","1919","1909","1935","GoI Act of 1919",
+  "GoI Act of 1909","GoI Act of 1935","Government of India Act of 1919","Government of India Act of 1909",
+  "Government of India Act of 1935"],
+
+	"Making of Constitution": ["Cabinet Mission","Independence of India Act","Mountabatten Plan","Constituent Assembly",
+  "Drafting Committee","Committes of Constituent Assembly","26th January, 1950","26th Noember, 1949"],
+
+  "Preamble": ["Preamble","SOVEREIGN","SOCIALIST","SECULAR","DEMOCRATIC","REPUBLIC ","justice","liberty","fraternity"],
+
+  "Fundamental Rights": ["part 3","part III"," rght to equalty "," rght to freedom "," rght aganst explotaton",
+  " rght to freedom of relgon"," cultural and educatonal rghts"," rght to consttutonal remedes","writ",
+  "Judicial review","keshvananda Bharati ","Minreva Mills","Maneka Gandhi","Golaknath","Right to Property",
+  "constitutional rights","fundamental rights","statutory rights"],
+
+  "DPSPs": ["Directive Principles","DPSPs","Directive Principles of State Policy","Part IV"],
+
+  "Fundamental Duties": ["44th Constitutional Amendment","Swarn Singh Committee","Fundamental Duties","Part IVA"],
+
+  "Amendments to Constitution": ["Consitutional Amenment"],
+
+  "Federal System": ["Schedule 7","Unitary Government","Federation","Federal"],
+
+  "Center-State Relations": ["Unitary Features","Federal Features"],
+
+  "Inter-State Relations": ["inter State Water dispute","Inter State Council","Zonal Council"],
+
+  "Emergency Provisions": ["Emergency Provisions","Emergency","President Rule","Financial Emergency"],
+
+  "Special Status for some states": ["article 371"],
+
+  "Public Services": ["All India Services","Cabinet Secretary","Cabinet Secretariate","State Services"],
+
+  "Special Provisions for SCs, STs, OBCs and Religious Minorities": ["National Commission for minorities",
+  "National Commission for linguistic minorities"],
+
+  "Parliamentary Form Of Government": ["Collective responsibility","Cabinet","Sovereignity of Parliament"],
+
+  "President": ["President"],
+
+  "Vice - President": ["Vice President","Vice - President","Chairman of Rajya Sabha"],
+
+  "Prime Minister": ["Prime Minister"],
+
+  "Council of Minister": ["Council of Minister","Collective Responsibility","Cabinet","Cabinet Committees","Minister"],
+
+  "Indian Parliament": ["Lok Sabh","Rajya Sabh","Parliament","Speaker","Chairman of Rajya Sabha","Speaker of Lok Sabha",
+  "Paliament","Bicameral"],
+
+  "Budget in Parliament": ["Budget","demands for grants","Appropriation Bill","Finance Bill"," Vote on credit",
+  " Vote on accounts"," exceptional grants"," Supplementary grants"," Excess grants"," Token grants",
+  "money bill","Cut Motion","charged upon","voted upon","voted expenditure","charged expenditure","additional grants"],
+
+  "Joint Sitting": ["joint sitting"],
+
+  "Parliamentary Committees": ["parliamentary committees","PAC","Public Account Committee","Estimates Committee",
+  "Committee on Public Undertakings","departmentally related standing committees","JPC","Joint Parliamentay Committee",
+  "Standing Committee","Ad-Hoc committee"],
+
+  "Governor": ["governor"],
+
+  "Chief Minister": ["Chief Minister","State Council of Ministers"],
+
+  "State Council of Ministers": ["State Council of Ministers"],
+
+  "State Legislature": ["State Legislature","State Legislative Council","Legislative Assembly"],
+
+  "Supreme Court": ["Supreme Court","Chief justice of India","Collegium","NJAC"],
+
+  "High Court": ["High Court"],
+
+  "Subordinate Courts": ["District Courts","Lower Courts","Sub-ordinate courts"],
+
+  "Tribunals": ["Tribunals","National Green Tribunal","Administrative Tribunal","art 323A","art. 323A","article 323A"],
+
+  "Gram Nyayalays": ["Gram Nyayalays"],
+
+  "Alternate Dispute Resolution": ["Mediation","Arbitration","Reconciliation"],
+
+  "Panchayati Raj": ["Panchayati Raj","Panchayat","rural government","Gram Sabha","Sarpanch","73rd Amendment",
+  "State Finance Commission","State election Commission","11th Schedule"],
+
+  "Urban Local Bodies": ["Urban Local Bodies","Urban Local Bodies","Metropolitan Planning Committee",
+  "District planning Committee","Municipality","74th Amendment","State Finance Commission","State election Commission",
+  "municipal Council","Municipal Corporation","Ward Committees","12th Schedule"],
+
+  "Union Territories": ["Union Territories","Uts","Ponducherry","NCT Delhi"],
+
+  "Schedule and Tribal Areas": ["5th Schedule","6th Schedule","Schedule Areas","Tribal Areas",
+  "Tribal Advisory Council","Autonomous Council","PESA","Forest Rights Act"],
+
+  "Election Commission": ["Election Commission","Election Commission of India","State Election Commission",
+  "Regional Election Commission","Chief Election Commission","Election Commission"],
+
+  "Public Service Commissions": ["Public Service Commissions","Union Public Service Commissions",
+  "State Public Service Commissions","Joint Public Service Commissions"],
+
+  "Finance Commission": ["Finance Commission"],
+
+  "CAG": ["CAG"],
+
+  "Attorney General and Solicitor General of India": ["Attorney General and Solicitor General of India"],
+
+  "Advocate General of the State": ["Advocate General of the State"],
+
+  "National Commission for SCs, STs": ["National Commission for SCs, STs","National Commission for Scheduled Castes",
+  "National Commission for Scheduled Tribes"],
+
+  "NITI Aayog Planning Commission and NDC": ["NITI Aayog Planning Commission and NDC","Planning Commission"],
+
+  "Zonal Councils": ["Zonal Councils"],
+
+  "Commission for Human Rights, Women & Children, Consumers": ["Commission for Human Rights, Women & Children, Consumers",
+  "National Human Rights Commission","State Human Rights Commission","National Commission for Women",
+  "national commission for protection of child rights","National Comsumer Rights Commission","Consumer Rights","Children Rights"],
+
+  "Lokayukta and Lokpal, CVC, CBI": ["Lokayukta and Lokpal, CVC, CBI","Lokayukta","Lokpal","CBI","CVC",
+  "Central Vigilance Commission","Central Bureau of Investigation","Santhanam Committee"],
+
+  "Information Commissions": ["Information Commissions","Central Information Commission","State Information Commission"],
+
+  "political Parties and Pressure Groups": ["political Parties and Pressure Groups"],
+
+  "Elections and Anti-Defection Law": ["Elections"," Anti-Defection Law","Model Code of Conduct","Election Date",
+  "National Party","State Party","Electoral Roll","RPA","Representation of People Act","delimitation Commission"]
+  }
 }
