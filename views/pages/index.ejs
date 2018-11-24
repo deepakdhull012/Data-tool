@@ -1,60 +1,87 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <% include ../partials/header.ejs %>
+    <% include ../partials/header.ejs %>
 </head>
 
 <body>
 
 
-<div class="container">
-  <div class="formHolder">
-  <form method="post" enctype="multipart/form-data" onsubmit="return Validate(this);">
+    <div class="container">
 
-    <input type="file" name="fileUpload" class="fileBrowser"/>
-    <span class="supportedFormats">Supported formats(doc,docx,txt)... test</span>
-    <div class="noOfQuesHolder">
-      <label>Total Questions in file:</label>
-      <input type="number" name="noOfQuestions" class=""/>
+        <div style="width:50%;float:left;">
+            <button onclick="downloadKeywordFile()">Download Keyword File</button>
+        </div>
+        <div class="formHolder">
+            <form method="post" enctype="multipart/form-data" onsubmit="return Validate(this);">
+                <div style="width:50%;float:left;">
+                    <h5>By defaut quesSep = 'Ques.'</h5>
+                    Custom Question Seperator <input type="text" name="quesSep" />
+                    <h5>By defaut opAsep = '(a)'</h5>
+                    Custom opA seperator <input type="text" name="opAsep" />
+                    <h5>By defaut opBsep = '(b)'</h5>
+                    Custom opB seperator <input type="text" name="opBsep" />
+                    <h5>By defaut opCsep = '(c)'</h5>
+                    Custom opC seperator <input type="text" name="opCsep" />
+                    <h5>By defaut opDsep = '(d)'</h5>
+                    Custom opD seperator <input type="text" name="opDsep" />
+                    <h5>By defaut correctAnsSep = 'CORRECTANSWER)'</h5>
+                    Custom correctAnswer seperator <input type="text" name="correctAnsSep" />
+                    <h5>By defaut explanationSep = 'Explanation:)'</h5>
+                    Custom explanation seperator <input type="text" name="explanationSep" />
+                </div>
+                <input type="file" name="fileUpload" class="fileBrowser" />
+                <span class="supportedFormats">Supported formats(doc,docx,txt)...</span>
+                <div class="noOfQuesHolder">
+                    <label>Total Questions in file:</label>
+                    <input type="number" name="noOfQuestions" class="" />
+                </div>
+                <input type="submit" name="uploadFile" value="Upload Question File" class="uploadBtn" />
+                <div class="clearfix"></div>
+            </form>
+        </div>
     </div>
-    <input type="submit" name="uploadFile" value="Upload Question File" class="uploadBtn"/>
-    <div class="clearfix"></div>
-  </form>
-</div>
-</div>
 
-<script type="text/javascript">
-var _validFileExtensions = [".txt",".docx",".doc",".pdf",".xlsx",".xlx"];
-function Validate(oForm) {
-  var arrInputs = oForm.getElementsByTagName("input");
-  for (var i = 0; i < arrInputs.length; i++) {
-      var oInput = arrInputs[i];
-      if (oInput.type == "file") {
-          var sFileName = oInput.value;
-          if (sFileName.length > 0) {
-              var blnValid = false;
-              for (var j = 0; j < _validFileExtensions.length; j++) {
-                  var sCurExtension = _validFileExtensions[j];
-                  if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
-                      blnValid = true;
-                      break;
-                  }
-              }
-//document.getElementsByClassName("supportedFormats").setAttribute("style", "color: red");
+    <script type="text/javascript">
+        function downloadKeywordFile() {
+            console.log('called');
+            window.location = "/keywordData";
 
-              if (!blnValid) {
-                  alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
-                  //document.getElementsByClassName("supportedFormats").setAttribute("style", "color: red");
-                  return false;
-              }
+        }
+
+        var _validFileExtensions = [".txt", ".docx", ".doc", ".pdf", ".xlsx", ".xlx"];
+        function Validate(oForm) {
+            var arrInputs = oForm.getElementsByTagName("input");
+            for (var i = 0; i < arrInputs.length; i++) {
+                var oInput = arrInputs[i];
+                if (oInput.type == "file") {
+                    var sFileName = oInput.value;
+                    if (sFileName.length > 0) {
+                        var blnValid = false;
+                        for (var j = 0; j < _validFileExtensions.length; j++) {
+                            var sCurExtension = _validFileExtensions[j];
+                            if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+                                blnValid = true;
+                                break;
+                            }
+                        }
+                        //document.getElementsByClassName("supportedFormats").setAttribute("style", "color: red");
+
+                        if (!blnValid) {
+                            alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+                            //document.getElementsByClassName("supportedFormats").setAttribute("style", "color: red");
+                            return false;
+                        }
 
 
-          }
-      }
-  }
+                    }
+                }
+            }
 
-  return true;
-}
-</script>
+            return true;
+        }
+    </script>
 </body>
+
 </html>

@@ -14,6 +14,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+let isQuestionAnswerSeperate = true;   // Answers are at the bottom of file 
+
+
 let keyWords;
 
 extractKeys().then((res) => {
@@ -24,7 +27,7 @@ extractKeys().then((res) => {
 
 function extractKeys() {
   return new Promise((resolve, reject) => {
-    textract.fromFileWithPath('public\\uploads\\geoKeys.txt', function (error, keywordsFileContent) {
+    textract.fromFileWithPath('public\\uploads\\keywords.txt', function (error, keywordsFileContent) {
       if (!error) {
         resolve(JSON.parse(keywordsFileContent))
       } else {
@@ -38,8 +41,26 @@ function extractKeys() {
 router.get('/', function (req, res, next) {
   res.render('pages/index')
 });
+router.get('/keywordData', function (req, res, next) {
+  var file = 'public\\uploads\\keywords.txt';
+    res.download(file);
+});
+
+router.post('/keywordData',upload.single('fileUpload'), function (req, res) {
+  var file = 'public\\uploads\\keywords.txt';
+    res.download(file);
+});
+
 
 router.post('/', upload.single('fileUpload'), function (req, res) {
+  quesSep = req.body.quesSep.length > 0 ? req.body.quesSep : 'Ques.';
+  opAsep = req.body.opAsep.length > 0 ? req.body.opAsep :'(a)';
+  opBsep = req.body.opBsep.length > 0 ? req.body.opBsep :'(b)';
+  opCsep = req.body.opCsep.length > 0 ? req.body.opCsep :'(c)';
+  opDsep = req.body.opDsep.length > 0 ? req.body.opDsep :'(d)';
+  correctAnsSep = req.body.correctAnsSep.length > 0 ? req.body.correctAnsSep :'CORRECTANSWER)';
+  explanationSep = req.body.explanationSep.length > 0 ? req.body.explanationSep :'Explanation:)';
+
   textract.fromFileWithPath(req.file.path, function (error, text) {
     if (!error) {
       let fileContent = text;
@@ -53,16 +74,7 @@ router.post('/', upload.single('fileUpload'), function (req, res) {
 
 });
 
-let isQuestionAnswerSeperate = true;   // Answers are at the bottom of file 
 
-let quesSep = 'Ques.'
-let opAsep = '(a)'
-let opBsep = '(b)'
-let opCsep = '(c)'
-let opDsep = '(d)'
-
-let correctAnsSep = 'CORRECTANSWER)'
-let explanationSep = 'Explanation:)'
 
 
 
