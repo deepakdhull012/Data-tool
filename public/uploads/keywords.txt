@@ -181,6 +181,6 @@
   "political Parties and Pressure Groups": ["political Parties and Pressure Groups"],
 
   "Elections and Anti-Defection Law": ["Elections"," Anti-Defection Law","Model Code of Conduct","Election Date",
-  "National Party","State Party","Electoral Roll","RPA","Representation of People Act","delimitation Commission"]
+  "National Party","State Party","Electoral Roll","RPA","Representation of People Act","delimitation Commission","Congress"]
   }
 }
